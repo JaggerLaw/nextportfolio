@@ -1,7 +1,15 @@
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function SectionDivider() {
   return (
-    <div className="bg-gray-200 my-24 h-16 w-1 rounded-full hidden sm:block"></div>
+    <motion.div
+      className="bg-gray-200 my-24 h-10 w-1 rounded-full hidden sm:block"
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 100, y: 0 }}
+      whileHover={{ rotate: 180 }}
+    ></motion.div>
   );
 }
